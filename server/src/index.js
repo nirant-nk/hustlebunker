@@ -3,6 +3,8 @@ import http from 'http';
 import app from './app.js';
 import { PORT } from './constants.js';
 import connectDB from './database/index.js';
+import authRoutes from "./routes/auth.routes.js";
+import bookingRoutes from "./routes/booking.routes.js";
 /* CONFIGURATIONS */
 dotenv.config({
     path: './.env',
@@ -40,6 +42,9 @@ app.get('/',
         }
     )
 )
+
+app.use("/api/auth",authRoutes)
+app.use("/api/bookings",bookingRoutes)
 
 /* PAGE NOT FOUND */
 app.use((req, res) => {

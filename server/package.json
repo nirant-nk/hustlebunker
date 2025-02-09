@@ -9,7 +9,7 @@
   },
   "keywords": [],
   "author": "Nirant Kale",
-  "license": "ISC",
+  "license": "MIT",
   "type": "module",
   "dependencies": {
     "bcrypt": "^5.1.1",
